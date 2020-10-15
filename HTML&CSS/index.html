@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML и CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>HTML&CSS</title>
+    <script defer src='./script.js'></script>
+</head>
+<body>
+    <header>
+        <nav class="header-menu">
+            <ul>
+                <li><a href="#links">Ссылки</a></li>
+                <li><a href="#images">Изображения</a></li>
+                <li><a href="#table">Таблицы</a></li>
+                <li><a href="#audio">Аудио</a></li>
+                <li><a href="#video">Видео</a></li>
+                <li><a href="#form">Формы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+            <section>
+                <div class="html-text">
+                    <h2 class="theme">HTML-текст</h2>
+                    <ol>
+                        <li><b>Теги заголовков</b>
+                            <ul class="headers-tags">
+                                <li><h1>Заголовок первого уровня</h1></li>
+                                <li><h2>Заголовок второго уровня</h2></li>
+                                <li><h3>Заголовок третьего уровня</h3></li>
+                                <li><h4>Заголовок четвертого уровня</h4></li>
+                                <li><h5>Заголовок пятого уровня</h5></li>
+                                <li><h6>Заголовок шестого уровня</h6></li>
+                            </ul>                   
+                        </li>
+                        <li><b>Теги для форматирования текста</b>
+                            <div class="formatting-tags">
+                                <p><i>Lorem ipsum dolor sit,</i> amet <small>consectetur adipisicing elit.</small>Corrupti laudantium sed reiciendis alias iure, possimus cum. Dolor iure commodi libero, praesentium, fuga voluptatem quo odit error inventore, delectus nobis molestias modi consectetur vitae dignissimos. Explicabo mollitia minus voluptas corporis unde, assumenda atque rerum officia maiores qui id praesentium at natus?</p>
+                                <p>x<sup>4</sup></p>
+                                <p>x<sub>0</sub></p>
+                                <p><mark><del>Перечеркнутый текст</del></mark></p>
+                            </div>                    
+                        </li>
+                        <li><b>Теги для ввода "компьютерного текста"</b>
+                            <div class="input-computer-text">
+                                <code>
+                                    const involution = x => x**2
+                                </code>
+                            </div>
+                        </li>
+                        <li><b>Теги для оформления цитат и определений</b>
+                            <div class="quotes-tags">
+                                <abbr title="Server Side Rendering">SSR</abbr>                        
+                                <blockquote cite="http://www.world.org/zenit/index.html"> Зенит — это наивысшая для наблюдателя точка на небосклоне<br> в вертикальном направлении, которую, как известно,<br> можно легко определить с помощью вертикального отвеса.</blockquote>
+                            </div>
+                        </li>                 
+                    </ol>
+                    <br>
+                    <hr>          
+                </div>
+            </section>
+
+            <section>
+                <div id="links" class="html-links">
+                    <h2 class="theme">HTML-ссылки</h2>
+                    <h3>Фреймворки JS</h3>
+                    <ul>
+                        <li><a href="https://angular.io/" target="_blank">Angular</a></li>
+                        <li><a href="https://reactjs.org/" target="_blank">React</a></li>
+                        <li><a href="https://ru.vuejs.org/" target="_blank">Vue</a></li>
+                        <li><a href="https://ru.svelte.dev/" target="_blank">Svelte</a></li>
+                    </ul>         
+                </div>
+            </section>
+
+            <section>
+                <div id="images" class="html-images">
+                    <h2 class="theme">HTML-изображения</h2>
+                    <br>
+                    <p>JSONPlaceholder is a free online REST API that you can use whenever you need some fake data</p>
+                    <br>     
+                    <div class="images"></div>
+                </div>
+            </section>
+
+            <section>
+                <div id="table" class="html-table">
+                    <h2 class="theme">HTML-таблицы</h2>
+                    <table>
+                        <caption>Заголовок таблицы</caption>
+                        <colgroup>
+                            <col span="2" style="background: #ccc;">
+                        </colgroup>
+                        <thead> 
+                            <tr>
+                                <th>Заголовок 1</th>
+                                <th>Заголовок 2</th>
+                                <th>Заголовок 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">ячейка</td>
+                                <td>ячейка</td>                  
+                            </tr>
+                        </tbody>           
+                    </table>           
+                </div>
+            </section>
+
+            <section>
+                <div id="audio" class="html-audio">
+                    <h2 class="theme">HTML-audio</h2>
+                    <audio src="https://html5book.ru/examples/media/track.mp3" controls></audio>
+                    <br>
+                </div>
+            </section>
+
+            <section>
+                <div id="video" class="html-video">
+                    <h2 class="theme">HTML-video</h2>
+                    <br>
+                    <div class="video-block">
+                        <video controls width="700px">
+                            <source src="https://html5book.ru/examples/media/martynko.mp4" type="video/mp4">
+                            <source src="https://html5book.ru/examples/media/martynko.webm" type="video/webm">
+                            <source src="https://html5book.ru/examples/media/martynko.ogv" type="video/ogg">
+                        </video>
+                    </div>             
+                </div>
+            </section>
+
+            <section>
+                <div id="form" class="html-form">
+                    <h2 class="theme">HTML-form</h2>
+                    <form action="">
+                        <fieldset>
+                            <legend>Контактная информация</legend>
+                            <label for="name">Имя:</label> <input id="name" type="text">
+                            <label for="email">Email:</label> <input id="email" type="email">                            
+                        </fieldset>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+        
+        </div>
+    </main>
+    <footer>
+        <div class="footer-block">
+            &copy; Шустов Даниил
+        </div>
+    </footer> 
+</body>
+</html>
+
+
+
+    
+  
+    

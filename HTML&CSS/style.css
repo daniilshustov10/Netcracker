@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: rgb(241, 221, 221);
+}
+
+/* HEADER-MENU */
+
+.header-menu {
+    padding: 30px 70px;
+}
+
+.header-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-menu ul :not(:last-child) {
+    margin-right: 10px;
+}
+
+.container {
+    padding: 20px 60px;
+}
+
+.theme {
+   text-align: center;
+}
+
+/* HTML-TEXT */
+
+.headers-tags {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.headers-tags li {
+    color: red;
+}
+
+.formatting-tags, 
+.input-computer-text, 
+.quotes-tags {
+    margin: 10px 0;
+    font-size: .9rem;
+}
+
+/* HTML-LINKS */
+
+.html-links ol{
+    list-style: none;
+    counter-reset: li;
+}
+
+.html-links ol li:before {
+    counter-increment: li;
+    content: counters(li, '.') '. ';
+}
+
+/* HTML-IMAGES */
+
+.images {
+    display: flex;
+}
+
+.images :not(:last-child) {
+    margin-right: 25px;
+}
+
+.image-item {
+    width: 150px;
+}
+
+/* HTML-TABLE */
+
+.html-table table,
+.html-table table th,
+.html-table table td {
+    border: 1px solid gray;
+}
+
+.html-table table {
+    border-collapse: collapse;
+    width: 500px;
+    text-align: center;
+}
+
+.html-table table caption:before {
+    content: '\269B';
+    margin-right: 10px;
+}
+
+.html-table table caption:after {
+    content: '\269B';
+    margin-left: 10px;
+}
+
+/* HTML-VIDEO */
+
+.video-block {
+    margin-left: calc(50% - 350px);
+}
+
+/* HTML-FORM */
+
+.html-form form {
+    width: 400px;
+}
+
+.html-form form fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 50px;
+}
+
+.html-form form button:hover {
+    color: blue;
+}
+
+/* FOOTER */
+
+.footer-block {
+    padding: 30px 80px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
