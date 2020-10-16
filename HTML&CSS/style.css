@@ -132,6 +132,90 @@ body {
     text-align: right;
 }
 
+/* TYPES-SELECTOR */
+
+.types-selector > h2 {
+    color: green;
+}
+
+.types-selector h2 + ul {
+    list-style: none;
+}
+
+.types-selector > ul > li {
+    color: red;
+}
+
+.types-selector > ul > li.first ~ li {
+    color: blue;
+}
+
+/* .types-selector > ul > li[class="first"] {
+    color: green;
+} */
+
+/* 
+.types-selector > ul > li[class~="color"] {
+    color: yellow;
+} */
+
+/* .types-selector > ul > li[class*="first"] {
+    color: green;
+} */
+
+a[href^="#"] {
+    color: darkgreen;
+}
+
+a:visited {
+    color: darkgoldenrod;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+/* CUSTOM CHECKBOX */
+
+.checkbox-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;   
+}
+
+.custom-checkbox + label:before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    padding: .2em;
+    border: 1px solid blue;
+    border-radius: .3em;
+    margin-right: .5em;
+}
+
+.custom-checkbox:checked + label:before {
+    background: blue;
+    font-family: FontAwesome;
+    content: '\f00c';
+    color: #ffffff;
+}
+
+
+
+
+
 
 
 
