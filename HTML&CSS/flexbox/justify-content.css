@@ -1,0 +1,48 @@
+body > :not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-start,
+.flex-end,
+.center,
+.space-between,
+.space-around,
+.space-evenly {
+    display: flex;
+    background: red;
+    padding: 10px;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-item {
+    padding: 15px;
+    color: #ffffff;
+    background: blue;
+    font-size: 20px;
+}
+
+
+

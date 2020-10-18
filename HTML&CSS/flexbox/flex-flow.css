@@ -1,0 +1,18 @@
+body > :not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.flex-item {
+    padding: 15px;
+    color: #ffffff;
+    background: blue;
+    margin-right: 10px;
+}
+
+.flex-flow {
+    display: flex;
+    padding: 10px;
+    flex-flow: column wrap;
+    height: 60px;
+    background: red;
+}

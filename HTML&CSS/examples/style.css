@@ -175,43 +175,130 @@ a:hover{
     text-decoration: none;
 }
 
-/* CUSTOM CHECKBOX */
+input:not(#name) {
+    border: 2px solid red;
+}
 
-.checkbox-block {
+.types-selector > ul > li:nth-child(odd) {
+    border-bottom: 1px solid red;
+}
+
+.types-selector > ul > li:nth-child(even) {
+    border-bottom: 1px solid yellow;
+}
+
+.types-selector > ul > li:nth-last-child(3) {
+    text-decoration: line-through;
+}
+
+.types-selector > ul > li:only-child {
+    color: orchid;
+} 
+
+/* PROPERTY POSITION */
+
+/* Relative */
+
+.relative-example {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
-.custom-checkbox {
-    position: absolute;
-    opacity: 0;
+.relative1,
+.relative2,
+.relative3 {
+    width: 100px;
+    height: 100px;
 }
 
-.custom-checkbox + label {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    margin-bottom: 10px;   
+.relative1 {
+    background: red;
 }
 
-.custom-checkbox + label:before {
-    content: '';
-    width: 1em;
-    height: 1em;
-    padding: .2em;
-    border: 1px solid blue;
-    border-radius: .3em;
-    margin-right: .5em;
-}
-
-.custom-checkbox:checked + label:before {
+.relative2 {
     background: blue;
-    font-family: FontAwesome;
-    content: '\f00c';
-    color: #ffffff;
 }
+
+.relative3 {
+    position: relative;
+    top: 30px;
+    left: 80px;
+    background: orange;
+}
+
+/* Absolute */
+
+.absolute-example {
+    position: relative;
+}
+
+.absolute1,
+.absolute2,
+.absolute3 {
+    width: 200px;
+    height: 100px;
+}
+
+.absolute1 {
+    background: blue;
+}
+
+.absolute2 {
+    background:red;
+    position: absolute;
+    top: 10%;
+}
+
+.absolute3 {
+    background: green;
+}
+
+/* Fixed */
+
+.fixed {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+/* Sticky */
+
+.sticky {
+    height: 500px;
+    width: 300px;
+    overflow: auto;
+    background: red;
+    margin: 0 auto;
+}
+
+.sticky1, 
+.sticky2,
+.sticky3 {
+    width: 100px;
+}
+
+.sticky1 {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    text-transform: capitalize;
+    background: blue;
+}
+
+.sticky2 {
+    height: 700px;
+    background: green;
+}
+
+.sticky3 {
+    height: 50px;
+    background: yellow;
+}
+
+
+
 
 
 

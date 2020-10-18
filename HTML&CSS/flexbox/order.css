@@ -1,0 +1,22 @@
+body > :not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.container1 {
+    display: flex;
+    padding: 15px;
+    width: 600px;
+    background: red;
+}
+
+.item {
+    padding: 15px;
+    color: white;
+    background: blue;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.item:nth-child(2) {
+    order: 2;
+}
