@@ -1,0 +1,71 @@
+* {
+    margin: 0 auto;
+}
+
+html {
+    font-size: 18px;
+}
+
+.check__header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.check__list {
+    padding: 20px;
+}
+
+.list__checkbox {
+    display: block;
+    padding-left: 1.75em;
+    user-select: none;
+}
+
+.list__checkbox:not(:last-child) {
+    margin-bottom: .8em;
+}
+
+.list__checkbox-input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.list__checkbox-box {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    margin-left: -1.75em;
+    border-radius: .15em;
+    border: 1px solid blue;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Checked */
+
+.list__checkbox-input:checked + .list__checkbox-box._checked {
+    background-color: blue;
+    background-image: url('https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fcheck.svg?1550563475518');
+}
+
+/* Disabled */
+
+.list__checkbox-input:disabled + .list__checkbox-box._disabled{
+    box-shadow: 0 0 0 0.15em #ccc;
+}
+
+
+/* Disabled Checked */
+
+.list__checkbox-input:disabled:checked + .list__checkbox-box._checked._disabled {
+    box-shadow: 0 0 0 0.15em #ccc;
+    background-color: #9B9B9B;
+}
+
+/* Focus */
+
+.list__checkbox-input:focus + .list__checkbox-box._focus {
+    box-shadow: 0 0 0 0.15em green;
+} 

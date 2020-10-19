@@ -1,0 +1,95 @@
+body :not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* example1 */
+
+.example1 > ul > li:first-child {
+    color: orange;
+}
+
+.example1 > ul > li:last-child {
+    color: red;
+}
+
+/* example2 */
+
+.example2 > ul > li {
+    width: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: blue;
+}
+
+.example2 > .odd > li:nth-child(odd) {
+    background: red;
+}
+.example2 > .even > li:nth-child(even) {
+    background: green;
+}
+
+/* example3 */
+
+.example3 > ul > li:nth-child(2n) {
+    background: red;
+}
+
+.example3 > ul > li:nth-child(2n+1) {
+    background: green;
+}
+
+.example3 > ul > li:nth-child(3) {
+    background: orange;
+}
+
+/* example4 */
+
+.example4 > ul > li:nth-last-child(2) {
+    background: red;
+}
+
+/* example5 */
+
+.example5 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
+
+:empty {
+    border: 5px solid orange;
+}
+
+/* example6 */
+
+/* :root {
+    background: #ccc;
+} */
+
+/* example7 */
+
+.example7 ul  :first-of-type {
+    color: orange;
+}
+
+/* example8 */
+
+.example8 > ul > li:last-of-type {
+    color: orange;
+}
+
+/* example9 */ 
+
+.example9 > p:nth-of-type(2) {
+    background: green;
+    color: #fff;
+}
+
+/* example10 */ 
+
+.example10 ul li:only-of-type {
+    color: orange;
+}
+
+
