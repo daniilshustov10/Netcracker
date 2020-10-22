@@ -260,6 +260,11 @@ body {
     margin-left: 15px;
 }
 
+.services__item:hover .services__item-icon {
+    transform: translateY(-5px);
+    transition: transform .3s ease-in-out;
+}
+
 .services__item-title {
     font-size: .9em;
 }
