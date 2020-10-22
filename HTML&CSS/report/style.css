@@ -93,3 +93,16 @@ body :not(:last-child) {
 }
 
 
+/* primer */
+
+.primer > ul > li {
+    width: 30px;
+    height: 30px;
+    background: green;
+}
+
+.primer > ul > li:nth-child(3n):after {
+    background: red;
+    content: 'block';
+}
+

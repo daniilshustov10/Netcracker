@@ -17,9 +17,11 @@ html {
 }
 
 .list__checkbox {
-    display: block;
+    position: relative;
+    display: block;   
     padding-left: 1.75em;
     user-select: none;
+    
 }
 
 .list__checkbox:not(:last-child) {
@@ -28,6 +30,8 @@ html {
 
 .list__checkbox-input {
     position: absolute;
+    top: 0;
+    left: 0;
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
@@ -45,27 +49,27 @@ html {
 
 /* Checked */
 
-.list__checkbox-input:checked + .list__checkbox-box._checked {
+.list__checkbox-input:checked + .list__checkbox-box {
     background-color: blue;
     background-image: url('https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fcheck.svg?1550563475518');
 }
 
 /* Disabled */
 
-.list__checkbox-input:disabled + .list__checkbox-box._disabled{
+.list__checkbox-input:disabled + .list__checkbox-box {
     box-shadow: 0 0 0 0.15em #ccc;
 }
 
 
 /* Disabled Checked */
 
-.list__checkbox-input:disabled:checked + .list__checkbox-box._checked._disabled {
+.list__checkbox-input:disabled:checked + .list__checkbox-box {
     box-shadow: 0 0 0 0.15em #ccc;
     background-color: #9B9B9B;
 }
 
 /* Focus */
 
-.list__checkbox-input:focus + .list__checkbox-box._focus {
+.list__checkbox-input:focus + .list__checkbox-box {
     box-shadow: 0 0 0 0.15em green;
 } 
