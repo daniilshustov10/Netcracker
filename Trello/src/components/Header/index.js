@@ -1,16 +1,11 @@
-import { Component } from '../Component';
-import { templateHeader } from './template'
+import { Component } from '../../modules/Component/component'
 
 export class Header extends Component {
-    constructor(tag, props, attrs, classes) {
-        super(tag, props, attrs, classes);
-
-        this.state = {}
-        this.template = templateHeader(this.state);
+    constructor(props, componentConfig) {
+        super(props, componentConfig)
     }
 }
 
-export const header = new Header('div', {}, {}, ['header']);
 
 
 

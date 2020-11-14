@@ -34,7 +34,7 @@ export class Router {
         const path = window.location.pathname;
         this.onRoute(path);
 
-        window.onpopstate =  () => {
+        window.onpopstate = () => {
             const path = window.location.pathname;
             this.onRoute(path);
         }
