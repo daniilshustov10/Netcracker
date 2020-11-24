@@ -7,22 +7,17 @@ export function template() {
         tag: 'div',
         attrs: {},
         classes: ['app__wrapper', 'wrapper'],
-        children: null,
+        textContent: null,
         childNodes: [
             new Header().render(),
-            new Board(Storage.getColumns()).render()
+            new Board(Storage.getColumns()).render(),
+            {
+                tag: 'button',
+                attrs: {},
+                classes: ['wrapper__button'],
+                textContent: 'Вверх'
+            }
         ]
     }
 }
 
-// {
-//     columns: [
-//             {id: Date.now(), head: 'column1', cards: [
-//                 {id: Date.now(), content: 'card1'}
-//             ]},
-//             {id: Date.now(), head: 'column2', cards: [
-//                 {id: Date.now(), content: 'card1'},
-//                 {id: Date.now(), content: 'card1'}
-//             ]}
-//         ]
-// }

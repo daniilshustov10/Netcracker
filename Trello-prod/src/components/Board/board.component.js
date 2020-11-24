@@ -9,6 +9,7 @@ export class Board extends Component {
     }
 
     addColumn(head) {
+        
         Storage.addColumn({
             id: Date.now(),
             head,
@@ -16,14 +17,13 @@ export class Board extends Component {
         })
     }
 
-    addListener() {
+    addListener() {        
 
         const addColumn = this.component.querySelector('.board__add-column');
         const addColumnContent = addColumn.querySelector('.board__add-column-content');
         const form = this.component.querySelector('.board__add-column-form');
         const formInput = form.querySelector('.form__input');
-        const confirmButton = form.querySelector('[type=submit]');
-        const cancelButton = form.querySelector('[type=button]');      
+        const confirmButton = form.querySelector('[type=submit]');     
 
         form.classList.toggle('_hide');
 
@@ -43,7 +43,7 @@ export class Board extends Component {
                 this.addColumn(formInput.value.trim());
 
                 addColumn.removeEventListener('click', addColumnHandler);
-                this.component.replaceWith(new Board(Storage.getColumns()).render())
+                this.component.replaceWith(new Board(Storage.getColumns()).render());
             }
 
         }).bind(this));

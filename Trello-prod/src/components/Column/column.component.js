@@ -29,21 +29,19 @@ export class Column extends Component {
         const columnDelete = this.component.querySelector('.column__delete');
         const columnContent = this.component.querySelector('.column__content');
         const addCard = columnContent.querySelector('.column__content-add');
-        const form = columnContent.querySelector('.column__content-form');
-        const formInput = form.querySelector('.form__input');
-        const confirmButton = form.querySelector('[type=submit]');
-        const cancelButton = form.querySelector('[type=button');
+        const columnContentForm = columnContent.querySelector('.column__content-form');
+        const form = columnContentForm.querySelector('.form');
 
-        form.classList.toggle('_hide');
+        columnContentForm.classList.toggle('_hide');
         
         this.component.addEventListener('click', (function columnClickHandler(event) {
             if (event.target === addCard) {
-                form.classList.toggle('_hide');
+                columnContentForm.classList.toggle('_hide');
                 addCard.classList.toggle('_hide');
             }
 
-            if (event.target === cancelButton) {
-                form.classList.toggle('_hide');
+            if (event.target === form.cancel) {
+                columnContentForm.classList.toggle('_hide');
                 addCard.classList.toggle('_hide');
             }
 
@@ -53,18 +51,21 @@ export class Column extends Component {
                 this.component.removeEventListener('click', columnClickHandler);                
 
                 document.querySelector('.board').replaceWith(new Board(Storage.getColumns()).render());
-            }
-
-            if (event.target === confirmButton) {
-                event.preventDefault();
-
-                this.addCard(formInput.value.trim());
-                
-                this.component.removeEventListener('click', columnClickHandler);
-                this.component.replaceWith(new Column(Storage.getColumn(this.props.id)).render());
-            }
+            }            
 
         }).bind(this))
+
+        form.addEventListener('submit', (function submitHandler(event) {
+            event.preventDefault();          
+
+            this.addCard(form.input.value.trim());
+
+            form.removeEventListener('submit', submitHandler);
+
+            this.component.replaceWith(new Column(Storage.getColumn(this.props.id)).render());       
+
+        }).bind(this));
+
     }
 
     render() {

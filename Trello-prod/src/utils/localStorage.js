@@ -1,47 +1,68 @@
 export class Storage {
-    static getColumns() {
-        return JSON.parse(localStorage.getItem('columns')) || [];
+    static getFromLocalStorage() {
+        return JSON.parse(localStorage.getItem('trello')) || {};
     }
 
-    static getColumn(id) {
-        const columns = Storage.getColumns();
-        return columns.find(column => column.id === id);
+    static getColumns() {
+        const trello = Storage.getFromLocalStorage();
+        return Object.keys(trello).includes('columns') 
+                ? trello.columns
+                : []
     }
 
     static addColumn(column) {
-        const columns = Storage.getColumns();
-        if (columns) {
-            columns.push(column);
-            localStorage.setItem('columns', JSON.stringify(columns));        
-        }
+        const trello = Storage.getFromLocalStorage();
+        Object.keys(trello).includes('columns') 
+            ? trello.columns.push(column)
+            : trello.columns = [column]
+    
+        localStorage.setItem('trello', JSON.stringify(trello));
     }
 
     static deleteColumn(columnId) {
-        let columns = Storage.getColumns();
-        columns = columns.filter(column => column.id !== columnId);
-        localStorage.setItem('columns', JSON.stringify(columns));
+        const trello = Storage.getFromLocalStorage();
+    
+        trello.columns = trello.columns
+            .filter(column => column.id !== columnId)
+    
+        localStorage.setItem('trello', JSON.stringify(trello));    
+    }
+
+    static getColumn(columnId) {
+        const trello = Storage.getFromLocalStorage();
+
+        return trello.columns.find(column => column.id === columnId);
     }
 
     static addCard(columnId, card) {
-        const columns = Storage.getColumns();
-        const needColumn = columns.find(column => column.id === columnId);
-        needColumn.cards.push(card);
-        localStorage.setItem('columns', JSON.stringify(columns));
+        const trello = Storage.getFromLocalStorage();
+
+        trello.columns
+            .find(column => column.id === columnId).cards.push(card);
+
+        localStorage.setItem('trello', JSON.stringify(trello));    
     }
 
-    static updateCard(card, content) {
-        const { columnId, id: cardId } = card;
+    static updateCard(columnId, cardId, content) {      
+        const trello = Storage.getFromLocalStorage();
+        
+        trello.columns
+            .find(column => column.id === columnId).cards
+            .map(card => {
+                if (card.id === cardId) card.content = content
+            })
+        
+        localStorage.setItem('trello', JSON.stringify(trello));
+    }
 
-        // const columns = Storage.getColumns();
-        // const needColumn = Storage.getColumn(columnId);
-        // const oldCard = needColumn.cards.find(card => card.id === cardId);
-        // oldCard.content = content;
+    static deleteCard(columnId, cardId) {
+        const trello = Storage.getFromLocalStorage();
 
-        // const columns = [
-        //     ...Storage.getColumns(),
-        //     Storage.getColumn()
-        // ]  
+        trello.columns
+            .find(column => column.id === columnId).cards = trello.columns
+            .find(column => column.id === columnId).cards
+            .filter(card => card.id !== cardId)
 
-        // localStorage.setItem('columns', JSON.stringify(columns));      
+        localStorage.setItem('trello', JSON.stringify(trello));       
     }
 }

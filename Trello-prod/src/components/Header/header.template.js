@@ -3,9 +3,14 @@ export function template() {
         tag: 'section', 
         attrs: {},
         classes: ['wrapper__header', 'header'], 
-        children: null,
+        textContent: null,
         childNodes: [
-            { tag: 'a', attrs: {href: '/'}, classes: ['header__logo'], children: null }
+            { 
+                tag: 'a', 
+                attrs: {href: '/'}, 
+                classes: ['header__logo'], 
+                textContent: null 
+            }
         ]
     }
 }

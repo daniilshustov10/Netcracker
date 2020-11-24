@@ -1,5 +1,5 @@
 export class Element {
-    constructor(tag = 'div', attrs = {}, classes = [], children = '') {
+    constructor(tag = 'div', attrs = {}, classes = [], textContent = '') {
         this.element = document.createElement(tag);
 
         Object.keys(attrs)
@@ -9,8 +9,8 @@ export class Element {
             classes.forEach(className => this.element.classList.add(className));
         }  
         
-        if (children) {
-            this.element.textContent = children;
+        if (textContent) {
+            this.element.textContent = textContent;
         }
 
         return this.element;

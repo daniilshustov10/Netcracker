@@ -3,31 +3,41 @@ export function template(props) {
         tag: 'form',
         attrs: {},
         classes: ['form'],
-        children: null, 
+        textContent: null, 
         childNodes: [
             { 
                 tag: 'input', 
-                attrs: { type: 'text', placeholder: props.placeholder }, 
+                attrs: { 
+                    type: 'text', 
+                    placeholder: props.placeholder, 
+                    name: 'input' 
+                }, 
                 classes: ['form__input'], 
-                children: null 
+                textContent: null 
             },
             { 
                 tag: 'div',
-                attrs: {},
+                attrs: { name: 'footer' },
                 classes: ['form__footer'],
-                children: null,
+                textContent: null,
                 childNodes: [
                     {
                         tag: 'button',
-                        attrs: {type: 'submit'},
+                        attrs: {
+                            type: 'submit',
+                            name: 'confirm'
+                        },
                         classes: ['form__footer-button', 'button', '_primary'],
-                        children: props.buttonName
+                        textContent: props.buttonName
                     },
                     {
                         tag: 'button',
-                        attrs: {type: 'button'},
+                        attrs: {
+                            type: 'button',
+                            name: 'cancel'
+                        },
                         classes: ['form__footer-button', 'button', '_secondary'],
-                        children: "Отмена"
+                        textContent: "Отмена"
                     }
                 ]            
             }

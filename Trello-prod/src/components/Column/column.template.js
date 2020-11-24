@@ -6,44 +6,44 @@ export function template(props) {
         tag: 'div',
         attrs: {},
         classes: ['board__column', 'column'],
-        children: null, 
+        textContent: null, 
         childNodes: [
             {
                 tag: 'div',
                 attrs: {},
                 classes: ['column__delete'],
-                children: null
+                textContent: null
             },
             {
                 tag: 'div',
                 attrs: {},
                 classes: ['column__content'],
-                children: null,
+                textContent: null,
                 childNodes: [
                     {
                        tag: 'div',
                        attrs: {},
                        classes: ['column__content-head'],
-                       children: props.head
+                       textContent: props.head
                     },
                     {
                         tag: 'div',
                         attrs: {},
                         classes: ['column__content-list'],
-                        children: null,
+                        textContent: null,
                         childNodes: props.cards.map(card => new Card({...card, columnId: props.id}).render())
                     },
                     {
                         tag: 'div',
                         attrs: {},
                         classes: ['column__content-add'],
-                        children: 'Добавить карточку'
+                        textContent: 'Добавить карточку'
                     },
                     {
                         tag: 'div',
                         attrs: {},
                         classes: ['column__content-form'],
-                        children: null,
+                        textContent: null,
                         childNodes: [
                             new Form({
                                 placeholder: 'Название карточки',

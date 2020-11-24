@@ -7,9 +7,9 @@ export class Component {
     }
 
     compile(template) {
-        const { tag, attrs, classes, children  } = template;
+        const { tag, attrs, classes, textContent  } = template;
 
-        this.element = new Element(tag, attrs, classes, children);
+        this.element = new Element(tag, attrs, classes, textContent);
 
         if (template.hasOwnProperty('childNodes') && template.childNodes.length) {
             this.createElementsFromChildNodes(this.element, template.childNodes);
@@ -23,8 +23,8 @@ export class Component {
             if (childElement instanceof HTMLElement) {
                 element.append(childElement);
             } else {
-                const {tag, attrs, classes, children} = childElement;
-                const elem = new Element(tag, attrs, classes, children);
+                const {tag, attrs, classes, textContent} = childElement;
+                const elem = new Element(tag, attrs, classes, textContent);
                 element.append(elem);
     
                 if (childElement.hasOwnProperty('childNodes') && childElement.childNodes.length) {
