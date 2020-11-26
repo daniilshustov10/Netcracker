@@ -3,12 +3,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem .5rem;
-    border-right: 1px solid @custom-purple;
+    padding: 1rem .5rem;  
+
+    &:hover &__title {
+        background: linear-gradient(45deg, @custom-orange, @custom-pink);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
     &__image {
         width: 30px;
         height: 30px;
-        margin: 0 0 .25rem;
+        display: block;
+        margin: 0 0 .5rem;
+    }
+
+    &__title {
+        .font-bold();
+
+        @media screen and (max-width: 1250px) {
+            & {
+                .font-bold-small();
+            }
+        }
     }
 }

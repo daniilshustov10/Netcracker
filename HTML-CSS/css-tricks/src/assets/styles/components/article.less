@@ -1,0 +1,131 @@
+.article {
+    @advertiseBlock: 377px;
+
+    position: relative;
+    width: calc(100% - @advertiseBlock);
+    padding: 20px;
+    overflow: hidden;
+    .font-base-big();
+
+    @media screen and (max-width: 1200px) {
+        & {
+            .font-base-large-medium();
+            padding: 18px;
+        }
+    }    
+
+    @media screen and (max-width: 1085px) {
+        & {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        & {
+            .font-base-medium();
+            padding: 16px;
+        }
+    }
+
+    &__publication {
+        margin: 0 0 .5rem;
+
+        &-fresh {
+            margin: 0 .3rem 0 0;
+            .font-bold-big();
+
+            @media screen and (max-width: 1200px) {
+                & {
+                    .font-bold-large-medium();
+                }
+            }
+
+            @media screen and (max-width: 800px) {
+                & {
+                    .font-bold-medium();
+                }
+            }
+        }
+
+        &-datetime {
+            color: @custom-gray;
+        }
+    }
+
+    &__header {
+        margin: 0 0 2rem;
+        line-height: 1;
+        .font-bold-largest();
+
+        @media screen and (max-width: 1200px) {
+            & {
+                .font-bold-more-large();
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            & {
+                .font-bold-larger();
+            }
+        }
+    }
+
+    &__author {
+        margin: 0 0 1.8rem;
+        .font-base();
+
+        @media screen and (max-width: 1200px) {
+            & {
+                .font-base-small();
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+
+    &__content {
+        overflow-wrap: break-word;
+        margin: 0 0 1.5rem;
+        border-radius: 8px;
+        .font-base-big();
+
+        @media screen and (max-width: 1200px) {
+            & {
+                .font-base-large-medium();
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            & {
+                .font-base-medium();
+            }
+        }
+
+        &-text {
+            max-width: 700px; 
+            margin-bottom: 34px;           
+        }
+    }
+
+    &__tags {
+        margin: 2rem 0 2rem;
+        padding: .5rem 0 1rem;
+        line-height: 2;
+
+        @media screen and (max-width: 1200px) {
+            .font-base-smaller();
+        }
+
+        &-item {           
+            white-space: nowrap;
+            border: 3px solid @custom-dark-blue;
+            border-radius: 2rem;
+            padding: .2rem 1rem .25rem;
+
+            &:hover {
+                border: 3px solid @custom-white;
+            }
+        }
+    }
+}

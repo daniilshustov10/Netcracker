@@ -1,11 +1,24 @@
 .sections {
     display: flex;
 
+    @media screen and (max-width: 855px) {
+        & {
+            display: none;
+        }
+    }
+
     &__item {
-        flex-grow: 1;
+        flex: 1;
+        border-right: 1px solid @custom-purple;
 
         &:first-child {
             border-left: 1px solid @custom-purple;
+        }
+
+        @media screen and (max-width: 1250px) {
+            &:last-child {
+                border-right: none;
+            }
         }
     }
 }

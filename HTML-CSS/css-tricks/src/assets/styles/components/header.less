@@ -4,15 +4,19 @@
     border-bottom: 1px solid @custom-purple;
 
     &__logo {
-        flex-grow: 0;
+        flex: 0;
     }
 
     &__sections {
-        flex-grow: 1;
+        flex: 1;
     }
 
     &__search {
         flex: 0 0 400px;
         padding: 0 1rem;
+
+        @media screen and (max-width: 1250px) {
+            display: none;
+        }
     }
 }

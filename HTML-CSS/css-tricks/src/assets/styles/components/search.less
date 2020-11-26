@@ -3,6 +3,10 @@
     border-radius: 28px;
     border: 2px solid @custom-lilac;
 
+    &:focus {
+        outline: 2px solid @custom-white;
+    }
+
     &__input {
         background: @custom-purple;
         border: 0;
@@ -14,6 +18,11 @@
         border-bottom-left-radius: 27px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        .font-base-big();
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__button {
@@ -29,6 +38,10 @@
             width: 20px;
             height: 20px;
             fill: @custom-white;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 }

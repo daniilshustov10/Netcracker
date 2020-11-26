@@ -1,0 +1,47 @@
+.mobile-search {
+    display: flex;
+    align-self: stretch;
+    background: @custom-black;
+    border-left: 1px solid @custom-purple;
+    border-bottom: 1px solid @custom-purple;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    cursor: pointer;
+
+    @media screen and (min-width: 1251px) {
+        & {
+            display: none;
+        }
+    }
+
+    &__opener {
+        padding: 0 1rem 0 1.3rem;
+        background: transparent;
+        border: none;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            fill: @custom-white;
+        }
+    }
+
+    &__nav {
+        padding: 0 1rem;
+        border: none;
+        border-left: 1px solid @custom-purple;
+        background: transparent;
+
+        @media screen and (min-width: 856px) {
+            & {
+                display: none;
+            }
+        }        
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            fill: @custom-white;
+        }
+    }
+}

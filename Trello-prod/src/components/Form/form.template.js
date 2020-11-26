@@ -25,7 +25,8 @@ export function template(props) {
                         tag: 'button',
                         attrs: {
                             type: 'submit',
-                            name: 'confirm'
+                            name: 'confirm',
+                            // disabled: 'true'
                         },
                         classes: ['form__footer-button', 'button', '_primary'],
                         textContent: props.buttonName

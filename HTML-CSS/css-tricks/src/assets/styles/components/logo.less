@@ -1,7 +1,11 @@
 .logo {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 28px 39px;
+
+    @media screen and (max-width: 855px) {
+        padding: 17px 35px;
+    }
 
     &__star {
         width: 34px;
@@ -10,11 +14,23 @@
         fill: @custom-orange;
         transition: transform 1.4s ease-out;
         transform: rotate(2turn);
+
+        @media screen and (max-width: 1250px) {
+            & {
+                width: 20px;
+                height: 22px;
+            }
+        }
     }
 
     &__text {
         fill: @custom-white;
         height: 25px;
         width: 199px;
+
+        @media screen and (max-width: 1250px) {
+            height: 15px;
+            width: 116px;
+        }
     }
 }

@@ -46,8 +46,10 @@ export class Card extends Component {
             if (!event.shiftKey && event.code === 'Enter') {
                 event.preventDefault();
 
-                if (this.props.content !== cardContent.textContent.trim()) {
-                    this.updateCard(cardContent.textContent.trim());
+                const content = cardContent.textContent.trim();
+
+                if (content.length && this.props.content !== content) {
+                    this.updateCard(content);
                 }
 
                 cardContent.blur();
@@ -56,13 +58,19 @@ export class Card extends Component {
         }).bind(this));
 
 
-        cardContent.addEventListener('blur', (function blurHandler(event) {            
-            if (this.props.content !== cardContent.textContent.trim()) {
-                this.updateCard(cardContent.textContent.trim());
+        cardContent.addEventListener('blur', (function blurHandler(event) { 
+            const content = cardContent.textContent.trim();
+
+            if (content.length && this.props.content !== content) {
+                this.updateCard(content);
             }
 
-            cardContent.removeAttribute('contenteditable');
-            deleteCard.classList.toggle('_hide');
+            if (content.length) {
+                cardContent.removeAttribute('contenteditable');
+                deleteCard.classList.toggle('_hide');
+            } else {
+                cardContent.focus();
+            }          
 
         }).bind(this));
         

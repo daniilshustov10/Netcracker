@@ -9,6 +9,11 @@ export class Column extends Component {
         this.component = null;
     }
 
+    updateColumnHead(head) {
+
+        Storage.updateColumnHead(this.props.id, head);
+    }
+
     deleteColumn() {
 
         Storage.deleteColumn(this.props.id);
@@ -28,6 +33,7 @@ export class Column extends Component {
 
         const columnDelete = this.component.querySelector('.column__delete');
         const columnContent = this.component.querySelector('.column__content');
+        const columnContentHead = columnContent.querySelector('.column__content-head');
         const addCard = columnContent.querySelector('.column__content-add');
         const columnContentForm = columnContent.querySelector('.column__content-form');
         const form = columnContentForm.querySelector('.form');
@@ -66,7 +72,41 @@ export class Column extends Component {
 
         }).bind(this));
 
-    }
+
+        columnContentHead.addEventListener('dblclick', function dblClickHandler(event) {
+            columnContentHead.setAttribute('contenteditable', 'true');
+            columnContentHead.focus();
+        });
+
+        
+        columnContentHead.addEventListener('keydown', (function keyHandler(event) {
+            if (!event.shiftKey && event.code === 'Enter') {
+                event.preventDefault();
+
+                const newHead = columnContentHead.textContent.trim();
+
+                if (newHead.length && this.props.head !== newHead) {
+                    this.updateColumnHead(newHead);
+                }
+
+                columnContentHead.blur();
+            }
+           
+        }).bind(this));
+
+        columnContentHead.addEventListener('blur', (function blurHandler(event) {
+            const newHead = columnContentHead.textContent.trim();
+
+            if (newHead.length && this.props.head !== newHead) {
+                this.updateColumnHead(newHead);
+            }
+
+            newHead.length 
+                ? columnContentHead.removeAttribute('contenteditable') 
+                : columnContentHead.focus()
+
+        }).bind(this));        
+    }    
 
     render() {
         this.component = this.compile(template(this.props));

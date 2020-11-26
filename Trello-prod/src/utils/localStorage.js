@@ -28,6 +28,15 @@ export class Storage {
         localStorage.setItem('trello', JSON.stringify(trello));    
     }
 
+    static updateColumnHead(columnId, head) {
+        const trello = Storage.getFromLocalStorage();
+
+        trello.columns
+            .find(column => column.id === columnId).head = head
+        
+        localStorage.setItem('trello', JSON.stringify(trello));        
+    }
+
     static getColumn(columnId) {
         const trello = Storage.getFromLocalStorage();
 

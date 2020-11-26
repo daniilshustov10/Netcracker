@@ -1,6 +1,7 @@
 .column {
     display: inline-block;
     position: relative;
+    min-width: 272px;
     width: 272px;
     margin: 0 4px;
     vertical-align: top; 
@@ -47,6 +48,12 @@
             overflow: hidden;
             overflow-wrap: break-word; 
             cursor: pointer;
+            
+            &:focus {
+                background: @white;
+                outline: none;
+                box-shadow: inset 0 0 0 2px @blue;
+            }
         }
 
         &-list {
@@ -82,21 +89,6 @@
 
 
 
-// .column__content-head:focus {
-//     background: #ffffff;
-//     outline: none;
-//     box-shadow: inset 0 0 0 2px #0079bf;
-// }
 
 
 
-// .card-list__item {    
-//     margin-bottom: 8px;    
-// }
-
-
-
-
-// .column__content-form {
-//     padding: 5px 10px;
-// }
