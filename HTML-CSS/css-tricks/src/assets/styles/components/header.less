@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     border-bottom: 1px solid @custom-purple;
@@ -7,16 +8,27 @@
         flex: 0;
     }
 
-    &__sections {
-        flex: 1;
+    &__menu {
+        flex: 1;        
     }
 
     &__search {
         flex: 0 0 400px;
         padding: 0 1rem;
 
-        @media screen and (max-width: 1250px) {
-            display: none;
+        @media screen and (max-width: @largest-breakpoint) {
+            & {
+                .hidden();
+                top: 100%;
+                width: 100%;
+                background: @custom-native-black;
+                padding: 1rem;
+                
+                &._open {                    
+                    .show();
+                    z-index: 2;
+                }
+            }
         }
     }
 }

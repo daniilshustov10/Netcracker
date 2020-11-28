@@ -7,20 +7,20 @@
     overflow: hidden;
     .font-base-big();
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: @large-breakpoint) {
         & {
             .font-base-large-medium();
             padding: 18px;
         }
     }    
 
-    @media screen and (max-width: 1085px) {
+    @media screen and (max-width: @bigger-breakpoint) {
         & {
             width: 100%;
         }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: @medium-breakpoint) {
         & {
             .font-base-medium();
             padding: 16px;
@@ -34,13 +34,13 @@
             margin: 0 .3rem 0 0;
             .font-bold-big();
 
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: @large-breakpoint) {
                 & {
                     .font-bold-large-medium();
                 }
             }
 
-            @media screen and (max-width: 800px) {
+            @media screen and (max-width: @medium-breakpoint) {
                 & {
                     .font-bold-medium();
                 }
@@ -57,14 +57,14 @@
         line-height: 1;
         .font-bold-largest();
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: @large-breakpoint) {
             & {
                 .font-bold-more-large();
                 margin-bottom: 1.5rem;
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: @medium-breakpoint) {
             & {
                 .font-bold-larger();
             }
@@ -75,13 +75,12 @@
         margin: 0 0 1.8rem;
         .font-base();
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: @large-breakpoint) {
             & {
                 .font-base-small();
                 margin-bottom: 1.5rem;
             }
         }
-
     }
 
     &__content {
@@ -90,13 +89,13 @@
         border-radius: 8px;
         .font-base-big();
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: @large-breakpoint) {
             & {
                 .font-base-large-medium();
             }
         }
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: @medium-breakpoint) {
             & {
                 .font-base-medium();
             }
@@ -105,27 +104,6 @@
         &-text {
             max-width: 700px; 
             margin-bottom: 34px;           
-        }
-    }
-
-    &__tags {
-        margin: 2rem 0 2rem;
-        padding: .5rem 0 1rem;
-        line-height: 2;
-
-        @media screen and (max-width: 1200px) {
-            .font-base-smaller();
-        }
-
-        &-item {           
-            white-space: nowrap;
-            border: 3px solid @custom-dark-blue;
-            border-radius: 2rem;
-            padding: .2rem 1rem .25rem;
-
-            &:hover {
-                border: 3px solid @custom-white;
-            }
         }
     }
 }

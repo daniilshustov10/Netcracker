@@ -3,7 +3,7 @@
     align-items: center;
     padding: 28px 39px;
 
-    @media screen and (max-width: 855px) {
+    @media screen and (max-width: @big-breakpoint) {
         padding: 17px 35px;
     }
 
@@ -13,9 +13,8 @@
         margin: 0 .5rem 0 0;
         fill: @custom-orange;
         transition: transform 1.4s ease-out;
-        transform: rotate(2turn);
 
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: @largest-breakpoint) {
             & {
                 width: 20px;
                 height: 22px;
@@ -28,7 +27,7 @@
         height: 25px;
         width: 199px;
 
-        @media screen and (max-width: 1250px) {
+        @media screen and (max-width: @largest-breakpoint) {
             height: 15px;
             width: 116px;
         }

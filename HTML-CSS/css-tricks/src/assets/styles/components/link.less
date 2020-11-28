@@ -1,6 +1,25 @@
 .link {
     color: @custom-white;
 
+    &__image {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 0 0 .5rem;
+
+        @media screen and (max-width: @big-breakpoint) {
+            & {
+                margin-right: 1rem;
+            }
+        }
+
+        &._secondary {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+        }
+    }
+
     &:hover {
         background: linear-gradient(45deg, @custom-orange, @custom-pink);
         background-clip: text;
@@ -30,12 +49,19 @@
         border-bottom: 2px solid @custom-white;
         .font-bold-medium();
 
+        @media screen and (max-width: @large-breakpoint) {
+            & {
+                border: none;
+            }
+        }
+
         &:hover {
             background: none;
             -webkit-text-fill-color: @custom-light-pink;             
         }
     }
 
-
-    
+    &._tertiary {
+        color: @custom-light-gray;
+    }    
 }
