@@ -9,7 +9,13 @@ export function template() {
                 tag: 'a', 
                 attrs: {href: '/'}, 
                 classes: ['header__logo'], 
-                textContent: null 
+                textContent: 'Mello'
+            },
+            {
+                tag: 'button', 
+                attrs: {type: 'button'}, 
+                classes: ['header__button', 'button', '_light'], 
+                textContent: 'Сменить тему'
             }
         ]
     }

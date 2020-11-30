@@ -66,11 +66,15 @@ export class Card extends Component {
             }
 
             if (content.length) {
+                if (this.props.content !== content) {
+                    this.updateCard(content);
+                }
+
                 cardContent.removeAttribute('contenteditable');
                 deleteCard.classList.toggle('_hide');
             } else {
                 cardContent.focus();
-            }          
+            }                
 
         }).bind(this));
         

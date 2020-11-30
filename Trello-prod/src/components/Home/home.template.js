@@ -10,13 +10,7 @@ export function template() {
         textContent: null,
         childNodes: [
             new Header().render(),
-            new Board(Storage.getColumns()).render(),
-            {
-                tag: 'button',
-                attrs: {},
-                classes: ['wrapper__button'],
-                textContent: 'Вверх'
-            }
+            new Board(Storage.getColumns()).render()
         ]
     }
 }

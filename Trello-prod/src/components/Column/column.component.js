@@ -105,7 +105,13 @@ export class Column extends Component {
                 ? columnContentHead.removeAttribute('contenteditable') 
                 : columnContentHead.focus()
 
-        }).bind(this));        
+        }).bind(this));
+        
+        form.input.addEventListener('input', (function inputHandler(event) {
+            form.input.value.trim().length
+                ? form.confirm.removeAttribute('disabled')
+                : form.confirm.setAttribute('disabled', 'true')
+        }).bind(this));
     }    
 
     render() {

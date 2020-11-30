@@ -30,10 +30,16 @@ export function template(props) {
                             new Form({
                                 placeholder: 'Введите название столбца',
                                 buttonName: 'Добавить список'
-                            }).render()
+                            }).render()                            
                         ]
                     }
                 ]
+            }, 
+            {
+                tag: 'button',
+                attrs: { 'hidden': 'true' },
+                classes: ['board__button'],
+                textContent: 'Назад'
             }
         ]
     }

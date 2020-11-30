@@ -9,6 +9,14 @@ export class Header extends Component {
 
     addListener() {
         const headerLogo = this.component.querySelector('.header__logo');
+        const headerButton = this.component.querySelector('.header__button')
+        const htmlRoot = document.documentElement;
+
+        headerButton.addEventListener('click', () => {
+            htmlRoot.hasAttribute('theme')
+                ? htmlRoot.removeAttribute('theme')
+                : htmlRoot.setAttribute('theme', 'light')
+        })
 
         headerLogo.addEventListener('click', function clickHandler(event) {
             event.preventDefault();         

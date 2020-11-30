@@ -23,7 +23,8 @@ export class Board extends Component {
         const addColumnContent = addColumn.querySelector('.board__add-column-content');
         const form = this.component.querySelector('.board__add-column-form');
         const formInput = form.querySelector('.form__input');
-        const confirmButton = form.querySelector('[type=submit]');     
+        const confirmButton = form.querySelector('[type=submit]'); 
+        const boardButton = this.component.querySelector('.board__button');    
 
         form.classList.toggle('_hide');
 
@@ -44,7 +45,34 @@ export class Board extends Component {
 
                 addColumn.removeEventListener('click', addColumnHandler);
                 this.component.replaceWith(new Board(Storage.getColumns()).render());
+                const newBoard = document.querySelector('.board');
+                newBoard.scrollLeft = newBoard.clientWidth;
             }
+
+        }).bind(this));
+
+        formInput.addEventListener('input', (function inputHandler(event) {
+            formInput.value.trim().length
+                ? confirmButton.removeAttribute('disabled')
+                : confirmButton.setAttribute('disabled', 'true')
+        }).bind(this));
+
+
+        const scrollLeft = new CustomEvent('scroll-left');
+
+        boardButton.addEventListener('scroll-left', (function(event) {
+            this.component.scrollTo(0, 0);
+        }).bind(this));
+
+        boardButton.addEventListener('click', function clickHandler(event) {
+            boardButton.dispatchEvent(scrollLeft);
+        });
+
+        this.component.addEventListener('scroll', (function scrollHandler(event) {
+
+            this.component.scrollWidth - this.component.clientWidth - this.component.scrollLeft < 100 
+                ? boardButton.removeAttribute('hidden')
+                : boardButton.setAttribute('hidden', 'true')
 
         }).bind(this));
     }

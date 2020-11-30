@@ -1,7 +1,7 @@
 export function template(props) {
     return {
         tag: 'div',
-        attrs: { draggable: 'true'},
+        attrs: {},
         classes: ['list__item', 'card'],
         textContent: null,
         childNodes: [
