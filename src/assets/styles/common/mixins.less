@@ -1,0 +1,43 @@
+.hidden() {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(0 0 0 0);
+}
+
+.show() {
+    opacity: 1;
+    visibility: visible;
+    clip: auto;
+}
+
+.ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.icon-header() {
+    width: 36px;
+    height: 36px;
+    opacity: 0.24;
+
+    &:hover {
+        opacity: 0.4;
+    }
+}
+
+.input-icon() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    box-sizing: content-box;
+}
+
+

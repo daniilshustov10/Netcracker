@@ -1,0 +1,88 @@
+@fontRegular: "YS";
+@fontMedium: "@{fontRegular}-Medium";
+@fontBold: "@{fontRegular}-Bold";
+
+@font-smaller-size: 11px;
+@font-small-size: 12px;
+@font-normal-size: 13px;
+@font-medium-size: 15px;
+@font-big-size: 20px;
+@font-large-size: 30px;
+
+.font(@font-family, @font-size, @font-weight, @font-style) {
+    font-family: @font-family, "Arial", "Helvetica", "sans-serif";
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
+.m-font(@font-size, @font-weight, @font-style) {
+    font-family: "Helvetica", "Arial", "sans-serif";
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
+.font-base() {
+    .font(@fontRegular, @font-normal-size, 400, normal);
+}
+
+.font-base-smaller() {
+    .font-base();
+    font-size: @font-smaller-size;
+}
+
+.font-base-small() {
+    .font-base();
+    font-size: @font-small-size;
+}
+
+.font-base-large() {
+    .font-base();
+    font-size: @font-large-size;
+}
+
+.font-medium() {
+    .font(@fontMedium, @font-medium-size, 500, normal);
+}
+
+.font-medium-bigger() {
+    .font-medium();
+    font-size: @font-large-size;
+}
+
+.font-bold() {
+    .font(@fontBold, @font-normal-size, 700, normal);
+}
+
+.font-bold-large {
+    .font-bold();
+    font-size: @font-large-size;
+}
+
+.m-font-base {
+    .m-font(@font-normal-size, 400, normal);
+}
+
+.m-font-base-small() {
+    .m-font-base();
+    font-size: @font-small-size;
+}
+
+.m-font-bold {
+    .m-font(@font-normal-size, 700, normal);
+}
+
+.m-font-bold-smaller {
+    .m-font-bold();
+    font-size: @font-smaller-size;
+}
+
+.m-font-medium {
+    .m-font(@font-medium-size, 500, normal);
+}
+
+.m-font-medium-bold {
+    .m-font-medium();
+    font-weight: 700;
+}

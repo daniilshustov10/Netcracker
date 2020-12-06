@@ -1,0 +1,26 @@
+.news {
+    display: flex;
+    justify-content: space-between;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+        padding: 0 10px 4px 20px;
+        max-width: 67%;
+
+        &-articles {
+            margin-top: 3px;
+        }
+
+        &-head {
+            margin-right: 18px;
+            padding-top: 4px;
+        }
+    }
+
+    &__widget {
+        max-width: 33%;
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,109 @@
+.ct-article {
+    @advertiseBlock: 377px;
+
+    position: relative;
+    width: calc(100% - @advertiseBlock);
+    padding: 20px;
+    overflow: hidden;
+    .ct-font-base-big();
+
+    @media screen and (max-width: @large-breakpoint) {
+        & {
+            .ct-font-base-large-medium();
+            padding: 18px;
+        }
+    }
+
+    @media screen and (max-width: @bigger-breakpoint) {
+        & {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: @medium-breakpoint) {
+        & {
+            .ct-font-base-medium();
+            padding: 16px;
+        }
+    }
+
+    &__publication {
+        margin: 0 0 0.5rem;
+
+        &-fresh {
+            margin: 0 0.3rem 0 0;
+            .ct-font-bold-big();
+
+            @media screen and (max-width: @large-breakpoint) {
+                & {
+                    .ct-font-bold-large-medium();
+                }
+            }
+
+            @media screen and (max-width: @medium-breakpoint) {
+                & {
+                    .ct-font-bold-medium();
+                }
+            }
+        }
+
+        &-datetime {
+            color: @custom-gray;
+        }
+    }
+
+    &__header {
+        margin: 0 0 2rem;
+        line-height: 1;
+        .ct-font-bold-largest();
+
+        @media screen and (max-width: @large-breakpoint) {
+            & {
+                .ct-font-bold-more-large();
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media screen and (max-width: @medium-breakpoint) {
+            & {
+                .ct-font-bold-larger();
+            }
+        }
+    }
+
+    &__author {
+        margin: 0 0 1.8rem;
+        .ct-font-base();
+
+        @media screen and (max-width: @large-breakpoint) {
+            & {
+                .ct-font-base-small();
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__content {
+        overflow-wrap: break-word;
+        margin: 0 0 1.5rem;
+        border-radius: 8px;
+        .ct-font-base-big();
+
+        @media screen and (max-width: @large-breakpoint) {
+            & {
+                .ct-font-base-large-medium();
+            }
+        }
+
+        @media screen and (max-width: @medium-breakpoint) {
+            & {
+                .ct-font-base-medium();
+            }
+        }
+
+        &-text {
+            max-width: 700px;
+            margin-bottom: 34px;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.ct-author {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+        margin-right: 1rem;
+        position: relative;
+
+        &-image {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: block;
+            overflow: hidden;
+            margin: 16px 10px;
+            background-image: url("./images/avatar.jpeg");
+            background-size: cover;
+
+            &._secondary {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 56px;
+            fill: none;
+            stroke: @custom-orange;
+            stroke-width: 8;
+            stroke-linecap: round;
+            pointer-events: none;
+
+            &._secondary {
+                width: 60px;
+                height: 48px;
+            }
+        }
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+
+        &-prefix {
+            color: @custom-gray;
+        }
+
+        &-name {
+            margin-top: -1px;
+        }
+    }
+}

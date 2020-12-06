@@ -1,0 +1,45 @@
+.m-input {
+    position: relative;
+
+    &__line {
+        width: 100%;
+        padding-right: 48px;
+        padding-left: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 2px solid @m-orange;
+        border-top: 3px solid @m-orange;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__search {
+        position: absolute;
+        top: 11px;
+        left: 11px;
+
+        &-icon {
+            width: 17px;
+            height: 17px;
+            fill: @gray;
+        }
+    }
+
+    &__example {
+        position: absolute;
+        top: 12px;
+        right: 14px;
+
+        &-text {
+            color: @gray;
+        }
+
+        &-link {
+            cursor: pointer;
+        }
+    }
+}

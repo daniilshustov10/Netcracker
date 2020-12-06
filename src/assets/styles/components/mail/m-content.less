@@ -1,0 +1,23 @@
+.m-content {
+    display: flex;
+    padding: 0 32px;
+    width: 1344px;
+
+    &__cards {
+        width: 300px;
+        margin-right: 40px;
+
+        &-item {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px @black-light-3;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__main {
+        width: 940px;
+    }
+}

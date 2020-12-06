@@ -1,0 +1,22 @@
+.font-face(@font-family, @file-path, @font-weight) {
+    @font-face {
+        font-family: @font-family;
+        font-weight: @font-weight;
+        src: local(@font-family), url("@{file-path}.woff2") format("woff2"),
+            url("@{file-path}.woff") format("woff"),
+            url("@{file-path}.ttf") format("ttf"),
+            url("@{file-path}.eot") format("eot");
+    }
+}
+
+.font-face(@fontRegular, "./fonts/YandexSansText-Regular", 400);
+
+.font-face(@fontMedium, "./fonts/YandexSansText-Medium", 500);
+
+.font-face(@fontBold, "./fonts/YandexSansText-Bold", 700);
+
+.font-face(@ct-FontRegular, "./fonts/CriqueGrotesk", 400);
+
+.font-face(@ct-FontMedium, "./fonts/CriqueGrotesk-Medium", 500);
+
+.font-face(@ct-FontBold, "./fonts/CriqueGrotesk-Bold", 700);

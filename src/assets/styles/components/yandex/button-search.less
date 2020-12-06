@@ -1,0 +1,31 @@
+.button {
+    width: 88px;
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 2px;
+    border: none;
+    position: relative;
+
+    &__text {
+        position: relative;
+        height: 36px;
+        background: transparent;
+
+        &::after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            content: "";
+            margin-left: 15px;
+            top: -10px;
+            border-width: 19px 0 19px 11px;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: @yandex-orange;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

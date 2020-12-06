@@ -1,0 +1,45 @@
+.input {
+    position: relative;
+
+    &__line {
+        width: 100%;
+        line-height: 36px;
+        height: 36px;
+        border: 2px solid @yandex-orange;
+        padding: 3px 80px 3px 10px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__keyboard {
+        .input-icon();
+        right: 0;
+        padding-right: 7px;
+
+        &-icon {
+            width: 27px;
+            height: 12px;
+
+            &:hover {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__voice {
+        .input-icon();
+        right: 40px;
+
+        &-icon {
+            width: 20px;
+            height: 18px;
+            opacity: 0.3;
+
+            &:hover {
+                opacity: 0.4;
+            }
+        }
+    }
+}

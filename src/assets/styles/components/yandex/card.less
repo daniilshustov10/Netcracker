@@ -1,0 +1,46 @@
+.card {
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 @black-light-2, 0 2px 6px 0 @black-light-2;
+    width: 180px;
+    padding: 12px 10px 12px 14px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-title {
+            display: block;
+            margin-left: -2px;
+            padding-right: 4px;
+            font-weight: 700;
+
+            &::first-letter {
+                color: @red;
+            }
+        }
+
+        &-user {
+            display: block;
+            width: 34px;
+            height: 34px;
+            background: @gray;
+            border-radius: 50%;
+
+            &:focus {
+                outline-color: @yandex-orange;
+            }
+        }
+    }
+
+    &__content {
+        &-text {
+            display: block;
+
+            &:not(:last-child) {
+                margin-bottom: 9px;
+            }
+        }
+    }
+}

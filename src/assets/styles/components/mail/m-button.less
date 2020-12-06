@@ -1,0 +1,35 @@
+.m-button {
+    width: 160px;
+    background: @m-blue;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    height: 32px;
+    border-radius: 2px;
+    white-space: nowrap;
+    line-height: 30px;
+
+    &:hover {
+        background: @m-darkblue;
+        cursor: pointer;
+    }
+
+    &__text {
+        color: @white;
+        .m-font-medium();
+    }
+
+    &__image {
+        height: 32px;
+
+        &-svg {
+            width: 16px;
+            height: 16px;
+            fill: @white;
+            vertical-align: middle;
+        }
+    }
+}

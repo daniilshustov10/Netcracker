@@ -1,0 +1,17 @@
+.projects {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

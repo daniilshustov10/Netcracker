@@ -1,0 +1,35 @@
+.ct-logo {
+    display: flex;
+    align-items: center;
+    padding: 28px 39px;
+
+    @media screen and (max-width: @big-breakpoint) {
+        padding: 17px 35px;
+    }
+
+    &__star {
+        width: 34px;
+        height: 38px;
+        margin: 0 0.5rem 0 0;
+        fill: @custom-orange;
+        transition: transform 1.4s ease-out;
+
+        @media screen and (max-width: @largest-breakpoint) {
+            & {
+                width: 20px;
+                height: 22px;
+            }
+        }
+    }
+
+    &__text {
+        fill: @custom-white;
+        height: 25px;
+        width: 199px;
+
+        @media screen and (max-width: @largest-breakpoint) {
+            height: 15px;
+            width: 116px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.ct-card {
+    min-width: 300px;
+    min-height: 350px;
+    box-shadow: -1rem 0 3rem @custom-native-black;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: @custom-deep-blue;
+    color: @custom-white;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    margin: 0;
+
+    @media screen and (max-width: @large-breakpoint) {
+        & {
+            min-width: 220px;
+        }
+    }
+
+    @media screen and (max-width: @medium-breakpoint) {
+        & {
+            min-width: 190px;
+        }
+    }
+
+    &__header {
+        &-subhead {
+            margin: 0 0 1rem;
+        }
+
+        &-title {
+            display: block;
+            line-height: 1;
+            margin: 0.25rem 0 auto;
+            .ct-font-bold-big;
+        }
+    }
+
+    &__content {
+        &-author {
+            margin: 4rem 0 0;
+            .ct-font-bold();
+        }
+    }
+
+    &__tags {
+        margin-bottom: 0;
+    }
+}

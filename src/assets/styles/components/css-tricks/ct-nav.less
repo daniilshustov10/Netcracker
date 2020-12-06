@@ -1,0 +1,69 @@
+.ct-nav {
+    @media screen and (max-width: @big-breakpoint) {
+        & {
+            .hidden();
+            overflow: auto;
+            top: 100%;
+            background: @custom-black;
+            z-index: 1;
+            width: 100%;
+            height: calc(100vh - 60px);
+        }
+
+        &._open {
+            .show();
+        }
+    }
+
+    &__line {
+        border: 0;
+        height: 5px;
+        width: 100%;
+        background: url("./images/ct-line.svg") repeat-x;
+
+        @media screen and (min-width: @big-breakpoint) {
+            & {
+                .hidden();
+            }
+        }
+    }
+
+    &__other-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+
+        @media screen and (min-width: @big-breakpoint) {
+            & {
+                .hidden();
+            }
+        }
+
+        &-link {
+            text-align: center;
+            padding: 0.25rem;
+            .ct-font-base-medium();
+        }
+    }
+
+    &__social {
+        display: flex;
+        border-top: 1px solid @custom-purple;
+        border-bottom: 1px solid @custom-purple;
+
+        @media screen and (min-width: @big-breakpoint) {
+            & {
+                .hidden();
+            }
+        }
+
+        &-link {
+            flex-grow: 1;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid @custom-purple;
+        }
+    }
+}

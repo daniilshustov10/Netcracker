@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outFile": "index.js",
+        "target":"ES2015",
+        "sourceMap": true,
+        "noImplicitThis": true,
+        "watch": true,
+        "allowJS": true
+    },
+    // "files": [
+    //     "src/classes.ts"
+    // ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+
+    ]
+}

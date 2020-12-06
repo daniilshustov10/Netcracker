@@ -1,0 +1,39 @@
+.m-form {
+    &__head {
+        padding: 12px 20px 8px;
+        margin-bottom: 4px;
+
+        &-link:first-child {
+            .m-font-medium-bold();
+        }
+
+        &-link:not(:first-child) {
+            float: right;
+        }
+
+        &-link:nth-child(3) {
+            margin-right: 20px;
+        }
+
+        &-link:last-child {
+            margin-right: 20px;
+        }
+    }
+
+    &__body {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        &-login {
+            margin-bottom: 8px;
+        }
+
+        &-button {
+            margin-bottom: 9px;
+        }
+
+        &-save {
+            margin-bottom: 10px;
+        }
+    }
+}

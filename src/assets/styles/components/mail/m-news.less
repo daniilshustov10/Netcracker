@@ -1,0 +1,33 @@
+.m-news {
+    &__header {
+        display: flex;
+        position: relative;
+        padding-top: 13px;
+        border-bottom: 1px solid @black-light-3;
+
+        &-item {
+            position: relative;
+            display: inline-flex;
+            padding: 0 10px;
+            height: 27px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-articles {
+            width: 600px;
+            margin-right: 40px;
+        }
+
+        &-advertise {
+            width: 300px;
+            margin-top: 12px;
+        }
+    }
+}

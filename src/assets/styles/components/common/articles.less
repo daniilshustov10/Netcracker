@@ -1,0 +1,43 @@
+.articles {
+    &__item {
+        position: relative;
+        margin-left: -22px;
+        padding-left: 22px;
+        padding-right: 1px;
+        margin-bottom: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 18px;
+            height: 100%;
+            background: linear-gradient(to right, transparent, @white);
+        }
+
+        &._mail {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            margin-bottom: -1px;
+            margin-top: 4px;
+        }
+
+        &._mail &-link {
+            display: flex;
+            align-items: center;
+        }
+
+        &-link {
+            display: flex;
+        }
+
+        &-label {
+            margin-right: 5px;
+        }
+    }
+}

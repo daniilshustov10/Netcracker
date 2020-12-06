@@ -1,0 +1,114 @@
+@ct-FontRegular: "CriqueGrotesk";
+@ct-FontMedium: "@{ct-FontRegular}-Medium";
+@ct-FontBold: "@{ct-FontRegular}-Bold";
+
+@ct-font-smaller-size: 10px;
+@ct-font-small-size: 12px;
+@ct-font-normal-size: 14px;
+@ct-font-medium-size: 16px;
+@ct-font-medium-large-size: 18px;
+@ct-font-big-size: 20px;
+@ct-font-large-size: 30px;
+@ct-font-larger-size: 32px;
+@ct-font-large-big-size: 38px;
+@ct-font-largest-size: 48px;
+
+.font(@font-family, @font-size, @font-weight, @font-style) {
+    font-family: @font-family, "system-ui", "Segoe UI", "Roboto", "Arial",
+        "Helvetica", "sans-serif";
+    font-size: @font-size;
+    font-weight: @font-weight;
+    font-style: @font-style;
+}
+
+.ct-font-base() {
+    .font(@ct-FontRegular, @ct-font-normal-size, 400, normal);
+}
+
+.ct-font-base-smaller() {
+    .ct-font-base();
+    font-size: @ct-font-smaller-size;
+}
+
+.ct-font-base-small() {
+    .ct-font-base();
+    font-size: @ct-font-small-size;
+}
+
+.ct-font-base-medium() {
+    .ct-font-base();
+    font-size: @ct-font-medium-size;
+}
+
+.ct-font-base-large-medium() {
+    .ct-font-base();
+    font-size: @ct-font-medium-large-size;
+}
+
+.ct-font-base-big() {
+    .ct-font-base();
+    font-size: @ct-font-big-size;
+}
+
+.ct-font-base-large() {
+    .ct-font-base();
+    font-size: @ct-font-large-size;
+}
+
+.ct-font-medium() {
+    .ct-font(@ct-FontMedium, @ct-font-medium-size, 500, normal);
+}
+
+.ct-font-medium-bigger() {
+    .cr-font-medium();
+    font-size: @ct-font-large-size;
+}
+
+.ct-font-bold() {
+    .font(@ct-FontBold, @ct-font-normal-size, 700, normal);
+}
+
+.ct-font-bold-smaller() {
+    .ct-font-bold();
+    font-size: @ct-font-smaller-size;
+}
+
+.ct-font-bold-small() {
+    .ct-font-bold();
+    font-size: @ct-font-small-size;
+}
+
+.ct-font-bold-medium() {
+    .ct-font-bold();
+    font-size: @ct-font-medium-size;
+}
+
+.ct-font-bold-big() {
+    .ct-font-bold();
+    font-size: @ct-font-big-size;
+}
+
+.ct-font-bold-large-medium() {
+    .ct-font-bold();
+    font-size: @ct-font-medium-large-size;
+}
+
+.ct-font-bold-large {
+    .ct-font-bold();
+    font-size: @ct-font-large-size;
+}
+
+.ct-font-bold-larger() {
+    .ct-font-bold;
+    font-size: @ct-font-larger-size;
+}
+
+.ct-font-bold-more-large {
+    .ct-font-bold();
+    font-size: @ct-font-large-big-size;
+}
+
+.ct-font-bold-largest {
+    .ct-font-bold();
+    font-size: @ct-font-largest-size;
+}

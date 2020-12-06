@@ -1,0 +1,42 @@
+.m-weather {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px 0;
+
+        &-link:nth-child(2) {
+            .m-font-base();
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        padding: 0 8px 4px 20px;
+
+        &-image {
+            width: 28px;
+            height: 28px;
+            background-size: cover;
+            background: url("https://limg.imgsmail.ru/assets/weather_icons/07.svg");
+        }
+
+        &-temp {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 700;
+            margin: 0 12px;
+            text-decoration: none;
+            color: @black;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px 12px;
+        border-top: 1px solid @black-light-3;
+    }
+}
